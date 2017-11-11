@@ -7,7 +7,7 @@ try:
     print("be silent")
     with m as source:
         r.adjust_for_ambient_noise(source)
-    print("minimum energy threshold: ".format(r.energy_threshold))
+    print("minimum energy threshold: {}".format(r.energy_threshold))
     
     while True:
         try:
