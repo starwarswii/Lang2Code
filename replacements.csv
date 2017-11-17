@@ -1,0 +1,48 @@
+#this file format is csv plus empty lines plus comments using hash(#) as the first character on the line
+#spaces after the commas are also ignored. TABS ARE NOT IGNORED
+#W = alphanumeric
+#D = number formatted
+#B = either W or D
+#S = W including spaces
+
+"W equals B",   "1 = 2"
+
+"W equals B plus B",    "1 = 2 + 3"
+"W equals B minus B",   "1 = 2 - 3"
+"W equals B times B",   "1 = 2 * 3"
+"W equals B over B",    "1 = 2 / 3"
+"W equals B mod B",     "1 = 2 % 3"
+
+"W equals B equals B",          "1 = 2 == 3"
+"W equals B is not equal to B", "1 = 2 != 3"
+
+"W equals B is less than B",                "1 = 2 < 3"
+"W equals B is greater than B",             "1 = 2 > 3"
+"W equals B is less than or equal to B",    "1 = 2 <= 3"
+"W equals B is greater than or equal to B", "1 = 2 >= 3"
+
+"W equals W of B",                  "1 = 2(3)"
+"W equals W(?: dot|\.) W(?: B)?",   "1 = 2.3(4)"
+"W(?: dot|\.) W(?: B)?",            "1.2(3)"
+
+"print B",          "print(1)"
+"print string S",   "print(""1"")"
+
+"while true",                   "while (True):", 1
+"while W",                      "while (1):", 1
+"while B equals B",             "while (1 == 2):", 1
+"while B is not equal to B",    "while (1 != 2):", 1
+"while B is less than B",       "while (1 < 2):", 1
+"while B is greater than B",    "while (1 > 2):", 1
+
+"if B equals B",            "if (1 == 2):", 1
+"if B is not equal to B",   "if (1 != 2):", 1
+"if B is less than B",      "if (1 < 2):", 1
+"if B is greater than B",   "if (1 > 2):", 1
+
+"for W in range B", "for 1 in range(2):", 1
+"for W in W",       "for 1 in 2:", 1
+
+"define W",             "def 1():", 1
+"define W of W",        "def 1(2):", 1
+"define W of W and W",  "def 1(2, 3):", 1
