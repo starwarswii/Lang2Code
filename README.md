@@ -1,4 +1,5 @@
 # Lang2Code
-converting semi-natural language to python code
+
+Converting semi-natural language to Python code
 
 Created for HackRPI 2017
